@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+:root{
+    --clr-primary-100:hsl(0, 0%, 100%);
+    --clr-primary-200:hsl(0, 0%, 63%);
+    --clr-primary-300:hsl(0, 0%, 27%);
+    --clr-primary-400:hsl(0, 0%, 0%);
+    --ff-base: 'League Spartan', sans-serif;
+    --fs-base:12px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: var(--fs-base);
+}
+body{
+    min-height: 100vh;
+    font-family: var(--ff-base);
+    overflow-x: hidden;
+}
+main{
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.navbar{
+    display: flex;
+    list-style: none;
+}
+.nav-links{
+    margin: 0 1rem;
+    >a{
+        text-decoration: none;
+        color: var(--clr-primary-100);
+        font-size: 1.5rem;
+    }
+}
+.logo{
+    width: 100px;
+    >img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.hero-img-1{
+    background: url(images/desktop-image-hero-1.jpg) center no-repeat;
+    background-size: cover;
+}
+.hero-img-2{
+    background: url(images/desktop-image-hero-2.jpg) center no-repeat;
+    background-size: cover;
+}
+.hero-img-3{
+    background: url(images/desktop-image-hero-3.jpg) center no-repeat;
+    background-size: cover;
+}
+.hero-img-1,
+.hero-img-2,
+.hero-img-3{
+    width: 60vw;
+    padding: 4rem;
+}
+/* ----------------------------------------------------- */
+.hero-info{
+    position: relative;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding:0 12rem;
+    >h1{
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+    >p{
+        max-width: 400px;
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        line-height: 1.75rem;
+        color: var(--clr-primary-200);
+    }
+    >a{
+        text-decoration: none;
+        color: var(--clr-primary-400);
+        font-size: 1.35rem;
+        letter-spacing: .75rem;
+    }
+    >a:hover{
+        color: var(--clr-primary-200);
+    }
+}
+.pagination{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+.btn{
+    padding: 2.5rem 3.6rem;
+    border: none;
+    background-color: var(--clr-primary-400);
+}
+.btn:hover{
+    background-color: var(--clr-primary-300);
+}
+
+footer{
+    height: 30vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
+}
+.ft-img-left{
+    background: url(images/image-about-dark.jpg) center no-repeat;
+    background-size: cover;
+}
+.ft-img-right{
+    background: url(images/image-about-light.jpg) center no-repeat;
+    background-size: cover;
+}
+.ft-info{
+    padding: 3.5rem 6rem;
+        >h3{
+            font-size: 1.5rem;
+            letter-spacing: .5rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        >p{
+            font-size: 1.2rem;
+            color: var(--clr-primary-200);
+            line-height: 1.65rem;
+        }
+}
+.mobile-nav,
+.hammenu{
+    visibility: hidden ;
+}
+#overlay{
+    display: none;
+}
+.mobile-nav{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    background-color: var(--clr-primary-100);
+    transition: 200ms;
+        >li{
+            margin: 0 1rem;
+            >a{
+                color: var(--clr-primary-400);
+            }
+        }
+}
+
+
+@media only screen and (max-width:400px){
+    main{
+        height: 100vh;
+        flex-direction: column;
+    }
+    nav{
+        width: 100%;
+        justify-content: center;
+    }
+    .logo{
+        width: 65px;
+    }
+    .navbar{
+        display: none;
+    }
+    .hero-img-1{
+        background: url(images/mobile-image-hero-1.jpg) center no-repeat;
+        background-size: 100% ;
+    }
+    .hero-img-2{
+        background: url(images/mobile-image-hero-2.jpg) center no-repeat;
+        background-size: 100% ;
+    }
+    .hero-img-3{
+        background: url(images/mobile-image-hero-3.jpg) center no-repeat;
+        background-size: 100% ;
+    }
+    .hero-img-1,
+    .hero-img-2,
+    .hero-img-3{
+        position: relative;
+        width: 100%;
+        height: 40vh;
+        padding: 2rem;
+    }
+    .hero-info{
+        height: 60vh;
+        width: 100%;
+        padding: 0 3rem;
+            >h1{
+                font-size: 2.75rem;
+            }
+            >p{
+                margin-bottom: 4rem;
+            }
+    }
+    .pagination{
+        top: -50px;
+        right: 0;
+        bottom: auto;
+        left: auto;
+    }
+    .btn{
+        padding: 1rem 2rem;
+    }
+    footer{
+        height: auto;
+        width: 100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.5fr 2fr 1.5fr;
+    }
+    .ft-info{
+        padding: 3.5rem 3.5rem;
+        >h3{
+            font-size: 1.25rem;
+        }
+    }
+    /*--------------- mobile navigation -----------*/
+    .mobile-nav,
+    .hammenu{
+        visibility: visible ;
+    }
+    .hammenu{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+    .hammenu:hover{
+        cursor: pointer;
+    }
+    .mobile-nav{
+        position: absolute;
+        top: -10px;
+        left: 0;
+        height: 0;
+        width: 100vw;
+        z-index: 999;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-right: 1rem;
+    }
+    .close-btn{
+        position: absolute;
+        top: 33px;
+        left: 27px;
+        z-index: 99;
+        display: none;
+        transition: 200ms;
+    }
+    .close-btn:hover{
+        cursor: pointer;
+    }
+    #overlay{
+        display: none;
+        position:absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 1;
+        width: 100vw;
+        height: 100vh;
+        transition: 200ms;
+    }
+}

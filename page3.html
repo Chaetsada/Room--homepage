@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon-32x32.png">
+    <title>Room-Homepage</title>
+</head>
+
+<body>
+    <main>
+        <section class="hero-img-3">
+            <nav>
+                <div class="logo">
+                    <img src="images/logo.svg" alt="logo">
+                </div>
+                <ul class="navbar">
+                    <li class="nav-links"><a href="#">home</a></li>
+                    <li class="nav-links"><a href="#">shop</a></li>
+                    <li class="nav-links"><a href="#">about</a></li>
+                    <li class="nav-links"><a href="#">contact</a></li>
+                </ul>
+                <!------- mobile-navigation --------->
+                <img onclick="openNav()" class="hammenu" src="images/icon-hamburger.svg" alt="ham-menu">
+                <div id="overlay"></div>
+                <ul class="mobile-nav" id="mobile-nav">
+                    <img onclick="closeNav()" id="close-btn" class="close-btn" src="images/icon-close.svg"
+                        alt="close-btn">
+                    <li class="nav-links"><a href="#">home</a></li>
+                    <li class="nav-links"><a href="#">shop</a></li>
+                    <li class="nav-links"><a href="#">about</a></li>
+                    <li class="nav-links"><a href="#">contact</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="hero-info">
+            <h1>Manufactured with the best materials</h1>
+            <p>Our modern furniture store provide a high level of quality. Our company has invested in advanced
+                technology
+                to ensure that every product is made as perfect and as consistent as possible. With three decades of
+                experience in this industry, we understand what customers want for their home and office.</p>
+            <a href="#">SHOP NOW <img src="images/icon-arrow.svg" alt="icon-arrow"></a>
+            <div class="pagination">
+                <button class="btn">
+                    <a href="page2.html"><img src="images/icon-angle-left.svg" alt="angle-left"></a>
+                </button>
+                <button class="btn">
+                    <a href="index.html"><img src="images/icon-angle-right.svg" alt="angle-right"></a>
+                </button>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="ft-img-left"></div>
+        <div class="ft-info">
+            <h3>About our furniture</h3>
+            <p>Our multifunctional collection blends design and function to suit your individual taste.
+                Make each room unique, or pick a cohesive theme that best express your interests and what
+                inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+                or anything in between. Product specialists are available to help you create your dream space.</p>
+        </div>
+        <div class="ft-img-right"></div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
